@@ -9,5 +9,6 @@ This svelte-kit project is deployed at learnascript.xyz via netlify.
 
 ## Documentation
 
-- [svelte docs](https://svelte.dev/docs)
-- [svelte-kit docs](https://kit.svelte.dev/docs)
+- [svelte](https://svelte.dev/docs)
+- [svelte kit](https://kit.svelte.dev/docs)
+- [svelte mui](https://svelte-mui.vercel.app/)

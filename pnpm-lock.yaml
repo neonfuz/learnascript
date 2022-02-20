@@ -9,6 +9,7 @@ specifiers:
   eslint-plugin-svelte3: ^3.2.1
   svelte: ^3.44.0
   svelte-check: ^2.2.6
+  svelte-mui: ^0.5.0
   svelte-preprocess: ^4.10.1
   tslib: ^2.3.1
   typescript: ~4.5.4
@@ -22,6 +23,7 @@ devDependencies:
   eslint-plugin-svelte3: 3.4.0_eslint@7.32.0+svelte@3.46.4
   svelte: 3.46.4
   svelte-check: 2.4.5_svelte@3.46.4
+  svelte-mui: 0.5.0_svelte@3.46.4
   svelte-preprocess: 4.10.3_svelte@3.46.4+typescript@4.5.5
   tslib: 2.3.1
   typescript: 4.5.5
@@ -1704,6 +1706,14 @@ packages:
     resolution: {integrity: sha512-bKE9+4qb4sAnA+TKHiYurUl970rjA0XmlP9TEP7K/ncyWz3m81kA4HOgmlZK/7irGK7gzZlaPDI3cmf8fp/+tg==}
     peerDependencies:
       svelte: '>=3.19.0'
+    dependencies:
+      svelte: 3.46.4
+    dev: true
+
+  /svelte-mui/0.5.0_svelte@3.46.4:
+    resolution: {integrity: sha512-0VvtRecru5OkyUViTgGwMrOL2Y+rJFvDsgb/5Mc2ZUTPdAhkQ1leUb58Zk8nH/utMzL8CEughRyd11DmBmFwqw==}
+    peerDependencies:
+      svelte: 3.*
     dependencies:
       svelte: 3.46.4
     dev: true
