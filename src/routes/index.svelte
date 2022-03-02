@@ -1,6 +1,5 @@
 <script>
- import WIP from '../lib/WIP.svelte';
- import Quiz from '../lib/Quiz.svelte';
+ import Quiz from '$lib/Quiz.svelte';
 
  const languages = [
      { name: 'Cyrillic (Russian)', id: 'russian' },
@@ -8,8 +7,6 @@
      { name: 'Katakana (Japanese)', id: 'katakana' },
  ];
 </script>
-
-<WIP/>
 
 <section id="header">
     <h1>LEARN A SCRIPT . XYZ</h1>

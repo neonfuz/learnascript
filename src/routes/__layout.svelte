@@ -1,4 +1,10 @@
+<script>
+ import WIP from '$lib/WIP.svelte';
+</script>
+
 <slot/>
+
+<WIP/>
 
 <style>
  :global(body) {

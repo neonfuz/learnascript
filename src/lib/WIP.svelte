@@ -1,3 +1,7 @@
+<div id="wip">
+    WIP: website is online for testing, not ready for general use
+</div>
+
 <style>
  #wip {
      text-align: center;
@@ -6,10 +10,7 @@
      padding: .5em;
      position: fixed;
      bottom: 0;
-     width: 100%;
+     left: 0;
+     width: 100vw;
  }
 </style>
-
-<div id="wip">
-    WIP: website is online for testing, not ready for general use
-</div>
