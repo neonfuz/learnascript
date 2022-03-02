@@ -1,5 +1,6 @@
 <script>
  import {Textfield} from 'svelte-mui';
+ export let lang;
 </script>
 
 <div class="Quiz">
