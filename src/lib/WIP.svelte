@@ -1,13 +1,22 @@
 <div id="wip">
-    WIP: website is online for testing, not ready for general use
+    <div>
+        WIP: website is online for testing, not ready for general use
+    </div>
 </div>
 
 <style>
- #wip {
+ #wip, #wip div {
+     height: 3em;
+     margin-top: 1em;
+     box-sizing: border-box;
+ }
+ #wip div {
      text-align: center;
      background: black;
      color: white;
-     padding: .5em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
      position: fixed;
      bottom: 0;
      left: 0;
