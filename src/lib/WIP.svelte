@@ -12,7 +12,7 @@
  }
  #wip div {
      text-align: center;
-     background: black;
+     background: #000c;
      color: white;
      display: flex;
      align-items: center;
