@@ -8,12 +8,10 @@
  ];
 </script>
 
-<section id="header">
-    <h1>LEARN A SCRIPT . XYZ</h1>
-</section>
 <section>
-    This is a website with tools to learn the writing system for various
-    languages
+    <h2>About</h2>
+    <p>This is a website with tools to learn writing systems</p>
+    <p>It is a work in progress, languages will be added gradually</p>
 </section>
 <section>
     <h2>Languages</h2>
