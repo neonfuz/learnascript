@@ -10,7 +10,9 @@
 </script>
 
 {#await getlang($page.params.lang)}
-    Loading...
+    <section>
+        Loading...
+    </section>
 {:then zis}
     {#if inStudy}
         <section><Quiz {zis} /></section>
