@@ -1,21 +1,31 @@
 <script>
  import { Textfield } from 'svelte-mui';
  export let zis;
- let zi = zis[Math.floor(zis.length * Math.random())];
- let input = '';
- $: if (input == zi.ICAO) {
-     zi = zis[Math.floor(zis.length * Math.random())];
-     input = '';
+ const newState = (oldState = {}) => ({
+     zi: zis[Math.floor(zis.length * Math.random())],
+     case: Math.floor(2 * Math.random()),
+     count: (oldState.count ?? -1) + 1,
+     input: '',
+ });
+ let state = newState();
+ const checkInput = (input) => {
+     if (input === state.zi.ICAO) {
+         state = newState(state);
+     }
  }
+ $: checkInput(state.input);
 </script>
 
 <div class="Quiz">
     <div class="question">
-        <tooltip title={zi.ICAO}>
-            {zi.Upper}
+        <tooltip title={state.zi.ICAO}>
+            {state.case ? state.zi.Upper : state.zi.Lower}
         </tooltip>
     </div>
-    <Textfield bind:value={input} />
+    <Textfield bind:value={state.input} />
+    <div class="count">
+        {state.count}
+    </div>
 </div>
 
 <style>
@@ -25,5 +35,8 @@
  }
  .Quiz :global(input) {
      text-align: center !important;
+ }
+ .count {
+     text-align: right;
  }
 </style>
