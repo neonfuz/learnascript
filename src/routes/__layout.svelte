@@ -4,9 +4,19 @@
 </script>
 
 <section>
-    <h1>LEARN A SCRIPT . XYZ</h1>
+    <h1><a href="/">LEARN A SCRIPT . XYZ</a></h1>
 </section>
 
 <slot/>
 
 <WIP/>
+
+<style>
+ a {
+     color: black;
+     text-decoration: none;
+ }
+ a:hover {
+     text-decoration: underline;
+ }
+</style>
