@@ -2,7 +2,10 @@
  import Quiz from '$lib/Quiz.svelte';
 
  const languages = [
+     { name: 'Arabic (Arabic)', id: 'arabic' },
      { name: 'Cyrillic (Russian)', id: 'russian' },
+     { name: 'Devanagari (Hindi)', id: 'hindi' },
+     { name: 'Greek (Greek)', id: 'greek' },
      { name: 'Hiragana (Japanese)', id: 'hiragana' },
      { name: 'Katakana (Japanese)', id: 'katakana' },
  ];
@@ -21,3 +24,12 @@
         {/each}
     </ul>
 </section>
+
+<style>
+ li {
+     margin-bottom: .5em;
+ }
+ a:visited {
+     color: blue;
+ }
+</style>
