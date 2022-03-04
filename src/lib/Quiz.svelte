@@ -9,7 +9,7 @@
  });
  let state = newState();
  const checkInput = (input) => {
-     if (input === state.zi.ICAO) {
+     if (input.toLowerCase() === state.zi.ICAO) {
          state = newState(state);
      }
  }
