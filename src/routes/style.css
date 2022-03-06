@@ -1,3 +1,11 @@
+:root {
+    --bkg-color: #c3deea;
+    --box-color: #eff5f9;
+    --box-shadow:
+         3px  3px 10px #0001,
+        -3px -3px 10px #0001;
+}
+
 body {
     background: fixed repeat top/5rem url(/background.png);
     display: flex;
@@ -6,13 +14,11 @@ body {
     text-align: center;
 }
 section {
-    background: #fffc;
+    background: var(--box-color);
     margin-top: 1.5em;
     padding: 1em;
     border-radius: .5em;
-    box-shadow:
-        3px 3px 10px #0001,
-        -3px -3px 10px #0001;
+    box-shadow: var(--box-shadow);
     max-width: calc(100vw - 4em);
 }
 p {

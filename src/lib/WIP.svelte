@@ -11,9 +11,9 @@
      box-sizing: border-box;
  }
  #wip div {
+     background: var(--box-color);
+     box-shadow: var(--box-shadow);
      text-align: center;
-     background: #000c;
-     color: white;
      display: flex;
      align-items: center;
      justify-content: center;
