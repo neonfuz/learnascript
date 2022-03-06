@@ -1,9 +1,10 @@
 <script>
  import { Textfield } from 'svelte-mui';
  export let zis;
+ export let options = { cases: 1 };
  const newState = (oldState = {}) => ({
      zi: zis[Math.floor(zis.length * Math.random())],
-     case: Math.floor(2 * Math.random()),
+     case: Math.floor(options.cases * Math.random()),
      count: (oldState.count ?? -1) + 1,
      countRevealed: (oldState.countRevealed ?? 0) + (oldState.revealed ?? 0),
      input: '',
@@ -13,7 +14,7 @@
      state.revealed = 1;
  }
  const checkInput = (input) => {
-     if (input.toLowerCase() === state.zi.ICAO) {
+     if (input.toLowerCase() === state.zi.roman) {
          state = newState(state);
      }
  }
@@ -22,10 +23,10 @@
 
 <div class="Quiz">
     <div class="question" on:click={reveal}>
-        {state.case ? state.zi.Upper : state.zi.Lower}
+        {state.case ? state.zi.char2 : state.zi.char}
     </div>
     <div class="answer" class:revealed={state.revealed}>
-        {state.zi.ICAO}
+        {state.zi.roman}
     </div>
     <Textfield bind:value={state.input} />
     <div class="count">

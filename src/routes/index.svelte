@@ -7,7 +7,7 @@
      { name: 'Devanagari (Hindi)', id: 'hindi', wip: true },
      { name: 'Greek (Greek)', id: 'greek', wip: true },
      { name: 'Hangul (Korean)', id: 'hangul', wip: true },
-     { name: 'Hiragana (Japanese)', id: 'hiragana', wip: true },
+     { name: 'Hiragana (Japanese)', id: 'hiragana' },
      { name: 'Katakana (Japanese)', id: 'katakana', wip: true },
  ];
 </script>

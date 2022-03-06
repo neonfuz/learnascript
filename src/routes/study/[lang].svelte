@@ -4,8 +4,13 @@
  import ZiChart from '$lib/ZiChart.svelte';
  import { getlang } from '$lib/util.js';
  let inStudy = false;
- function study() {
-     inStudy = true;
+ let studyOptions = {
+     cases: 1 // TODO auto detect & make this configurable
+ };
+ function study(zis) {
+     return () => {
+         inStudy = true;
+     }
  }
 </script>
 
@@ -15,11 +20,11 @@
     </section>
 {:then zis}
     {#if inStudy}
-        <section><Quiz {zis} /></section>
+        <section><Quiz {zis} options={studyOptions} /></section>
     {:else}
         <section>
             <ZiChart {zis} />
-            <button on:click={study}>Study</button>
+            <button on:click={study(zis)}>Study</button>
         </section>
     {/if}
 {:catch err}
