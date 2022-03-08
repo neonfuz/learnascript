@@ -1,30 +1,26 @@
 <script>
  import { page } from '$app/stores';
  import Quiz from '$lib/Quiz.svelte';
- import ZiChart from '$lib/ZiChart.svelte';
+ import Chart from '$lib/Chart/Chart.svelte';
  import { getlang } from '$lib/util.js';
  let inStudy = false;
- let studyOptions = {
+ let options = {
      cases: 1 // TODO auto detect & make this configurable
  };
- function study(zis) {
-     return () => {
-         inStudy = true;
-     }
- }
+ function study() { inStudy = true; }
 </script>
 
 {#await getlang($page.params.lang)}
     <section>
         Loading...
     </section>
-{:then zis}
+{:then chars}
     {#if inStudy}
-        <section><Quiz {zis} options={studyOptions} /></section>
+        <section><Quiz {chars} {options} /></section>
     {:else}
         <section>
-            <ZiChart {zis} />
-            <button on:click={study(zis)}>Study</button>
+            <Chart {chars} lang={$page.params.lang} />
+            <button on:click={study}>Study</button>
         </section>
     {/if}
 {:catch err}
