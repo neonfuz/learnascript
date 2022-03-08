@@ -1,9 +1,9 @@
 <script>
  import { Textfield } from 'svelte-mui';
- export let zis;
+ export let chars;
  export let options = { cases: 1 };
  const newState = (oldState = {}) => ({
-     zi: zis[Math.floor(zis.length * Math.random())],
+     zi: chars[Math.floor(chars.length * Math.random())],
      case: Math.floor(options.cases * Math.random()),
      count: (oldState.count ?? -1) + 1,
      countRevealed: (oldState.countRevealed ?? 0) + (oldState.revealed ?? 0),
