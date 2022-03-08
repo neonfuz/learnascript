@@ -13,14 +13,6 @@ body {
     align-items: center;
     text-align: center;
 }
-section {
-    background: var(--box-color);
-    margin-top: 1.5em;
-    padding: 1em;
-    border-radius: .5em;
-    box-shadow: var(--box-shadow);
-    max-width: calc(100vw - 4em);
-}
 p {
     margin-bottom: .5em;
 }
