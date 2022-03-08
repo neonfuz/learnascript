@@ -10,6 +10,10 @@
      { name: 'Hiragana (Japanese)', id: 'hiragana' },
      { name: 'Katakana (Japanese)', id: 'katakana', wip: true },
  ];
+ $: categories = {
+     ready: languages.filter(({wip}) => !wip),
+     wip: languages.filter(({wip}) => wip),
+ }
 </script>
 
 <section>
@@ -20,10 +24,18 @@
 <section>
     <h2>Languages</h2>
     <ul>
-        {#each languages as lang}
+        {#each categories.ready as lang}
             <li><a class:wip={lang.wip} href={'study/'+lang.id}>{lang.name}</a></li>
         {/each}
     </ul>
+    <section>
+        <h3>Planned</h3>
+        <ul>
+            {#each categories.wip as lang}
+                <li><a class:wip={lang.wip} href={'study/'+lang.id}>{lang.name}</a></li>
+            {/each}
+        </ul>
+    </section>
 </section>
 
 <style>
@@ -35,5 +47,8 @@
  }
  a.wip {
      color: grey;
+ }
+ section {
+     margin-top: 1em;
  }
 </style>
