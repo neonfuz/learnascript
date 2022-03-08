@@ -1,6 +1,7 @@
 <script>
  import Euro from './Euro.svelte';
  import Json from './Json.svelte';
+ import JP from './JP.svelte';
  export let chars;
  export let lang;
  $: component = getComponent(lang);
@@ -10,7 +11,7 @@
              return Euro;
          case 'hiragana':
          case 'katakana':
-             return Json; // TODO
+             return JP;
          default:
              return Json;
      }
