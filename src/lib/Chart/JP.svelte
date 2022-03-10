@@ -43,8 +43,7 @@
             {info}
         </div>
         <svg viewBox="0 0 10 10" width=".5em">
-            <path fill="white" stroke="#ccc"
-                  d="M 0,0 L 5,5 L 10,0" />
+            <path fill="#eff5f9" stroke="#ccc" d="M 0,0 L 5,5 L 10,0" />
         </svg>
 
     </div>
@@ -75,7 +74,8 @@
      align-items: center;
  }
  #info div:first-child {
-     background: white;
+     background: var(--box-color);
+     box-shadow: var(--box-shadow);
      outline: solid #ccc .06em;
      border-radius: .25em;
      padding: .4em;
