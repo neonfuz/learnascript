@@ -18,7 +18,7 @@
  main > :global(section) {
      background: var(--box-color);
      margin-top: 1.5em;
-     padding: 1em;
+     padding: 1.8rem;
      border-radius: .5em;
      box-shadow: var(--box-shadow);
      max-width: calc(100vw - 4em);
