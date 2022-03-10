@@ -2,13 +2,21 @@
  import { Textfield } from 'svelte-mui';
  export let chars;
  export let options = { cases: 1 };
- const newState = (oldState = {}) => ({
-     zi: chars[Math.floor(chars.length * Math.random())],
-     case: Math.floor(options.cases * Math.random()),
-     count: (oldState.count ?? -1) + 1,
-     countRevealed: (oldState.countRevealed ?? 0) + (oldState.revealed ?? 0),
-     input: '',
- });
+ const newState = (oldState = {}) => {
+     let zi = oldState.zi;
+     let case_ = oldState.case;
+     while (zi === oldState.zi && case_ === oldState.case) {
+         zi = chars[Math.floor(chars.length * Math.random())];
+         case_ = Math.floor(options.cases * Math.random());
+     } // Loop to stop randomly choosing same character twice
+     return ({
+         zi,
+         case: case_,
+         count: (oldState.count ?? -1) + 1,
+         countRevealed: (oldState.countRevealed ?? 0) + (oldState.revealed ?? 0),
+         input: '',
+     });
+ }
  let state = newState();
  const reveal = () => {
      state.revealed = 1;
