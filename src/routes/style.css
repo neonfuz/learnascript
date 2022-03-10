@@ -8,7 +8,7 @@
 }
 
 body {
-    background: fixed repeat top/5rem url(/background.png);
+    background: fixed repeat top/8rem url(/background.png);
     display: flex;
     flex-direction: column;
     align-items: center;
