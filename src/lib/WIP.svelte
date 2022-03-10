@@ -11,6 +11,7 @@
  p {
      margin: 0;
      line-height: 1.3em;
+     text-align: center;
  }
  span {
      display: inline-block;
