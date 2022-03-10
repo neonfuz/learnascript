@@ -23,9 +23,8 @@
         a language, preview it, select options (WIP), and click study.
     </p>
     <p>
-        You will be quizzed on each character in the script. Type the reading to
-        get points. If you don't remember a character, click it to reveal it's
-        reading.
+        You will be quizzed on each character in the script. If you don't
+        remember a character, click it to reveal it's reading.
     </p>
     <p>
         Score is shown in the lower right: completed without revealing / total
