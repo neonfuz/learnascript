@@ -6,7 +6,6 @@
          3px  3px 10px #0001,
         -3px -3px 10px #0001;
 }
-
 body {
     background: fixed repeat top/12rem url(/background.png);
     display: flex;
@@ -15,7 +14,12 @@ body {
     text-align: center;
     font-family: Inter, sans-serif;
 }
-p { margin-bottom: .5em; }
+p {
+    margin-bottom: 1em;
+    line-height: 1.2em;
+    text-align: left;
+    max-width: 40ch;
+}
 h1 { font-size: 1.7rem; font-weight: bold; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.3rem; }

@@ -17,9 +17,20 @@
 </script>
 
 <section>
-    <h2>About</h2>
-    <p>This is a website with tools to learn writing systems</p>
-    <p>It is a work in progress, languages will be added gradually</p>
+    <h2>Instructions</h2>
+    <p>
+        This website is a tool to learn scripts for various languages. Select
+        a language, preview it, select options (WIP), and click study.
+    </p>
+    <p>
+        You will be quizzed on each character in the script. Type the reading to
+        get points. If you don't remember a character, click it to reveal it's
+        reading.
+    </p>
+    <p>
+        Score is shown in the lower right: completed without revealing / total
+        completed.
+    </p>
 </section>
 <section>
     <h2>Languages</h2>
