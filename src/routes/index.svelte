@@ -52,8 +52,9 @@
  li {
      margin-bottom: .5em;
  }
+ a,
  a:visited {
-     color: blue;
+     color: var(--link-color);
  }
  a.wip {
      color: grey;

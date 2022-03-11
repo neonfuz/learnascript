@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 :root {
-    --bkg-color: #c3deea;
-    --box-color: #eff5f9;
-    --box-shadow:
-         3px  3px 10px #0001,
-        -3px -3px 10px #0001;
+  --box-color: #eff5f9;
+  --box-shadow:
+       3px  3px 10px #0001,
+       -3px -3px 10px #0001;
+  --font-color: black;
+  --link-color: blue;
 }
-body {
+#app {
     background: fixed repeat top/12rem url(/background.png);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-family: Inter, sans-serif;
+}
+#app.dark {
+    --box-color: #333;
+    --font-color: #ddd;
+    --link-color: #28d;
+    background: fixed repeat top/12rem url(/background-dark.png);
+    color: var(--font-color);
 }
 p {
     margin-bottom: 1em;
@@ -37,7 +45,7 @@ button:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-section {
+:is(header,main,footer) > section {
      background: var(--box-color);
      margin-top: 1.5em;
      padding: 1.8rem;

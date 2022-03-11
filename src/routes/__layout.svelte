@@ -1,23 +1,28 @@
 <script>
  import WIP from '$lib/WIP.svelte';
  import './style.css';
+ import { dark } from '$lib/state.js';
 </script>
 
-<header>
-    <section>
-        <h1><a href="/">LEARN A SCRIPT . XYZ</a></h1>
-    </section>
-</header>
+<div id="app" class:dark={$dark}>
+    <header>
+        <section>
+            <h1><a href="/">LEARN A SCRIPT . XYZ</a></h1>
+        </section>
+    </header>
 
-<main>
-    <slot/>
-</main>
+    <main>
+        <slot/>
+    </main>
 
-<WIP/>
+    <footer>
+        <WIP/>
+    </footer>
+</div>
 
 <style>
  h1 a {
-     color: black;
+     color: var(--font-color);
      text-decoration: none;
  }
  h1 a:hover {
