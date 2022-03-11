@@ -49,6 +49,7 @@
  }
  .Quiz :global(input) {
      text-align: center !important;
+     color: var(--text-color) !important;
  }
  .count {
      text-align: right;
