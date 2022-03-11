@@ -11,6 +11,7 @@
     background: fixed repeat top/12rem url(/background.png);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     align-items: center;
     text-align: center;
     font-family: Inter, sans-serif;

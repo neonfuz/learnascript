@@ -1,13 +1,24 @@
+<script>
+ import {dark} from '$lib/state.js';
+ function toggleDark() {
+     $dark = !$dark;
+ }
+</script>
+
 <div id="wip">
     <div>
         <p>
             <span>WIP: website is online for testing,</span>
             <span>not ready for general use</span>
         </p>
+        <span class="darktoggle" on:click={toggleDark}>🌓</span>
     </div>
 </div>
 
 <style>
+ .darktoggle {
+     cursor: pointer;
+ }
  p {
      margin: 0;
      line-height: 1.3em;
