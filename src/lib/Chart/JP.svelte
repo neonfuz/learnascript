@@ -71,6 +71,10 @@
      flex-direction: column;
      min-width: 5em;
      min-height: 6em;
+     outline: solid #ccc .125rem;
+     border-radius: 1rem;
+     padding: .2rem;
+     margin: 1rem;
  }
  .info .char {
      font-size: 5em;
