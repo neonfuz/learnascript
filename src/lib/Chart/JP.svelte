@@ -1,5 +1,6 @@
 <script>
  export let chars;
+ export let lang;
  $: layout = [
      "a",  "i",  "u",  "e",  "o",
      "ka", "ki", "ku", "ke", "ko",
@@ -19,16 +20,10 @@
      layout.filter((item, i) => i%5 === row)
  ));
  let info;
- let infoStyle = 'left:0;top:0';
- function enter(newInfo) {
+ function enter(c) {
      return e => {
          if (!e.isPrimary) return;
-         info = newInfo;
-         const rect = e.target.getBoundingClientRect();
-         infoStyle = `
-             left: ${rect.x + rect.width/2}px;
-             top:  ${rect.y - rect.height - 4}px;
-         `;
+         info = c;
      }
  }
  function leave(e) {
@@ -37,52 +32,53 @@
  }
 </script>
 
-{#if info}
-    <div id="info" style={infoStyle}>
-        <div>
-            {info}
-        </div>
-        <svg viewBox="0 0 10 10" width=".5em">
-            <path fill="#eff5f9" stroke="#ccc" d="M 0,0 L 5,5 L 10,0" />
-        </svg>
+<h2>{lang}</h2>
 
+<div class="container">
+    <div class="info">
+        {#if info}
+            <div class="char">
+                {info?.char}
+            </div>
+            <div class="reading">
+                {info?.roman}
+            </div>
+        {/if}
     </div>
-{/if}
-
-<table>
-    {#each rows as row}
-        <tr>
-            {#each row as c}
-                <td on:pointerenter={enter(c?.roman)} on:pointerleave={leave}>
-                    {c ? c.char : ''}
-                </td>
-            {/each}
-        </tr>
-    {/each}
-</table>
+    <table>
+        {#each rows as row}
+            <tr>
+                {#each row as c}
+                    <td on:pointerenter={enter(c)} on:pointerleave={leave}>
+                        {c ? c.char : ''}
+                    </td>
+                {/each}
+            </tr>
+        {/each}
+    </table>
+</div>
 
 <style>
- * {
+ .container {
      font-size: min(4vw, 2rem);
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
  }
- #info {
-     position: fixed;
-     pointer-events: none;
-     translate: -50%;
+ .info {
      display: flex;
      flex-direction: column;
-     align-items: center;
+     min-width: 5em;
+     min-height: 6em;
  }
- #info div:first-child {
-     background: var(--box-color);
-     box-shadow: var(--box-shadow);
-     outline: solid #ccc .06em;
-     border-radius: .25em;
-     padding: .4em;
+ .info .char {
+     font-size: 5em;
  }
  table {
      width: 100%;
      max-width: 300px;
+     user-select: none;
  }
  td {
      padding: .4em;

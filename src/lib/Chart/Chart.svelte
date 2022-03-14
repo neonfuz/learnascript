@@ -18,4 +18,4 @@
  }
 </script>
 
-<svelte:component this={component} {chars} />
+<svelte:component this={component} {chars} {lang} />
