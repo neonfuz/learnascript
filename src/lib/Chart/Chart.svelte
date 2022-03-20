@@ -1,38 +1,20 @@
 <script>
- import Euro from './Euro.svelte';
- import Json from './Json.svelte';
- import JP from './JP.svelte';
- import Info from '$lib/Info.svelte';
+ import Loadable from 'svelte-loadable';
  export let chars;
  export let lang;
- $: component = getComponent(lang);
- function getComponent(lang) {
-     switch (lang) {
-         case 'russian':
-             return Euro;
-         case 'hiragana':
-         case 'katakana':
-             return JP;
-         default:
-             return Json;
-     }
+ export let info;
+ const pathMap = new Map([
+     ['russian', 'Euro'],
+     ['hiragana', 'JP'],
+     ['katakana', 'JP'],
+ ])
+ function getComponentPath(lang) {
+     const name = pathMap.get(lang) ?? 'Json';
+     return `./${name}.svelte`
  }
- let info;
+ $: path = getComponentPath(lang);
 </script>
 
-<h2>{lang}</h2>
-
-<div class="container">
-    <Info {info} />
+<Loadable loader={() => import(path)} let:component>
     <svelte:component this={component} {chars} bind:info />
-</div>
-
-<style>
- .container {
-     font-size: min(4vw, 2rem);
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: center;
- }
-</style>
+</Loadable>
