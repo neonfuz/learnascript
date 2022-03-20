@@ -12,10 +12,14 @@ specifiers:
   rxjs: ^7.5.5
   svelte: ^3.44.0
   svelte-check: ^2.2.6
+  svelte-loadable: ^2.0.1
   svelte-mui: ^0.5.0
   svelte-preprocess: ^4.10.1
   tslib: ^2.3.1
   typescript: ~4.5.4
+
+dependencies:
+  svelte-loadable: 2.0.1_svelte@3.46.4
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.33
@@ -2942,6 +2946,14 @@ packages:
     dependencies:
       svelte: 3.46.4
     dev: true
+
+  /svelte-loadable/2.0.1_svelte@3.46.4:
+    resolution: {integrity: sha512-w/rv6HIS/I14MUmVWeSvfM+MO57Lz51bUibRfHg8xIvOP60LOCeiISV0idHI0qPo0hGsBUEoQeQEVRFlebZcig==}
+    peerDependencies:
+      svelte: ^3.20.1
+    dependencies:
+      svelte: 3.46.4
+    dev: false
 
   /svelte-mui/0.5.0_svelte@3.46.4:
     resolution: {integrity: sha512-0VvtRecru5OkyUViTgGwMrOL2Y+rJFvDsgb/5Mc2ZUTPdAhkQ1leUb58Zk8nH/utMzL8CEughRyd11DmBmFwqw==}
