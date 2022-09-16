@@ -8,20 +8,37 @@
   --link-color: blue;
 }
 #app {
-    background: fixed repeat top/12rem url(/background.png);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
     text-align: center;
     font-family: Inter, sans-serif;
+    position: relative;
+    transition: color .2s linear;
+}
+#app .background {
+    background: fixed repeat top/12rem url(/background.png);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+#app .background::before {
+    background: fixed repeat top/12rem url(/background-dark.png);
+    position: absolute;
+    inset: 0;
+    content: '';
+    transition: opacity .2s linear;
+    opacity: 0;
 }
 #app.dark {
     --box-color: #333;
     --font-color: #ddd;
     --link-color: #28d;
-    background: fixed repeat top/12rem url(/background-dark.png);
     color: var(--font-color);
+}
+#app.dark .background::before {
+    opacity: 1;
 }
 p {
     margin-bottom: 1em;
@@ -57,4 +74,5 @@ button:hover {
      border-radius: .5em;
      box-shadow: var(--box-shadow);
      max-width: calc(100vw - 4em);
+     transition: background .2s linear;
 }

@@ -5,6 +5,8 @@
 </script>
 
 <div id="app" class:dark={$dark}>
+    <div class="background"></div>
+
     <header>
         <section>
             <h1><a href="/">LEARN A SCRIPT . XYZ</a></h1>

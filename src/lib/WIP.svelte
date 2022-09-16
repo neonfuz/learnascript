@@ -1,7 +1,11 @@
 <script>
- import {dark} from '$lib/state.js';
+ import { dark } from '$lib/state.js';
  function toggleDark() {
-     $dark = !$dark;
+     const img = new Image();
+     img.src = '/background-dark.png';
+     img.onload = () => {
+         $dark = !$dark;
+     };
  }
 </script>
 
