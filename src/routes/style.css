@@ -18,13 +18,13 @@
     transition: color .2s linear;
 }
 #app .background {
-    background: fixed repeat top/12rem url(/background.png);
+    background: fixed repeat top/36rem url(/background.png);
     position: absolute;
     inset: 0;
     z-index: -1;
 }
 #app .background::before {
-    background: fixed repeat top/12rem url(/background-dark.png);
+    background: fixed repeat top/36rem url(/background-dark.png);
     position: absolute;
     inset: 0;
     content: '';
